@@ -10,7 +10,7 @@ constexpr int size_gb = 12;
 constexpr uint64_t size = 1024 * 1024 * 1024* (uint64_t)size_gb;
 constexpr int workers_number{8};
 constexpr int calls{1048576}; // 2**20
-constexpr int repetitions{8};
+constexpr int repetitions{7};
 
 struct timed_scope {
     std::string name;
@@ -212,11 +212,6 @@ int main() {
 
     for (auto i = 0; i < repetitions; i++)
     {
-        single_thread_sse();
-    }
-
-    for (auto i = 0; i < repetitions; i++)
-    {
         single_thread_memcpy();
     }
 
@@ -229,10 +224,5 @@ int main() {
     {
         multithread_copy_helper(memcpy, "memcpy");
     }
-
-    for (auto i = 0; i < repetitions; i++)
-    {
-        multithread_copy_helper(copy_with_sse, "sse");
-    }    
     
 }

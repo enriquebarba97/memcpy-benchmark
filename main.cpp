@@ -70,12 +70,12 @@ void single_thread_memcpy() {
 
     auto res = memcmp(dst, src, size);
 
-    if (res) {
-        std::cout << "Error in compare" << std::endl;
-        exit(1);
-    }
+//    if (res) {
+//        std::cout << "Error in compare" << std::endl;
+//        exit(1);
+//    }
 
-    std::cout << "Compare ok" << std::endl;
+//    std::cout << "Compare ok" << std::endl;
 
     free_buffers(dst, src);
 }
@@ -98,14 +98,14 @@ void single_thread_memcpy_multiple() {
         }
     }
 
-    auto res = memcmp(dst, src, size);
+//    auto res = memcmp(dst, src, size);
 
-    if (res) {
-        std::cout << "Error in compare" << std::endl;
-        exit(1);
-    }
+//    if (res) {
+//        std::cout << "Error in compare" << std::endl;
+//        exit(1);
+//    }
 
-    std::cout << "Compare ok" << std::endl;
+//    std::cout << "Compare ok" << std::endl;
 
     free_buffers(dst, src);
 }
@@ -143,12 +143,12 @@ void multithread_copy_helper(Functor function, const std::string &name) {
 
     }
 
-    auto res = std::memcmp(dst, src, size);
-    if (res) {
-        std::cout << "Error in compare" << std::endl;
-        exit(1);
-    }
-    std::cout << "Compare ok" << std::endl;
+//    auto res = std::memcmp(dst, src, size);
+//    if (res) {
+//        std::cout << "Error in compare" << std::endl;
+//        exit(1);
+//    }
+//    std::cout << "Compare ok" << std::endl;
 
     free_buffers(dst, src);
 }

@@ -68,7 +68,7 @@ void single_thread_memcpy() {
         memcpy(dst, src, size);
     }
 
-    auto res = memcmp(dst, src, size);
+//    auto res = memcmp(dst, src, size);
 
 //    if (res) {
 //        std::cout << "Error in compare" << std::endl;
